@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omar - Component Library</title>
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+
+    <header class="omar-header">
+        <div class="omar-container omar-navbar">
+            <h2>Components UI</h2>
+
+           <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="components.html" aria-current="page">Components</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="omar-hero omar-container" id="home">
+            <h1>Build Better Web Experiences</h1>
+            <p>
+                A responsive component library built with HTML and CSS.
+            </p>
+            <a href="#responsive" class="omar-btn">Explore Components</a>
+        </section>
+
+        <section class="omar-container omar-section" id="responsive">
+            <h2>Our Components</h2>
+
+            <div class="omar-grid">
+                <article class="omar-card">
+                    <h3>Responsive Design</h3>
+                    <p>
+                        A flexible layout for mobile, tablet and desktop.
+                    </p>
+                </article>
+
+                <article class="omar-card">
+                    <h3>Form Elements</h3>
+                    <p>
+                        Accessible inputs, labels, buttons and dropdowns.
+                    </p>
+                </article>
+
+                <article class="omar-card">
+                    <h3>CSS Modal</h3>
+                    <p>
+                        A popup window created using CSS without JavaScript.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="omar-container omar-section" id="contact">
+            <h2>Contact Form</h2>
+
+            <form class="omar-form" action="#" method="get">
+                <div class="omar-form-group">
+                    <label for="omar-name">Full Name</label>
+                    <input
+                        type="text"
+                        id="omar-name"
+                        name="name"
+                        placeholder="Enter your name"
+                        autocomplete="name"
+                        required
+                    >
+                </div>
+
+                <div class="omar-form-group">
+                    <label for="omar-email">Email Address</label>
+                    <input
+                        type="email"
+                        id="omar-email"
+                        name="email"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <div class="omar-form-group">
+                    <label for="omar-category">Choose a Category</label>
+                    <select id="omar-category" name="category" required>
+                        <option value="">Select a category</option>
+                        <option value="web">Web Development</option>
+                        <option value="design">Web Design</option>
+                        <option value="support">Technical Support</option>
+                    </select>
+                </div>
+
+                <div class="omar-form-group">
+                    <label for="omar-message">Your Message</label>
+                    <textarea
+                        id="omar-message"
+                        name="message"
+                        rows="4"
+                        placeholder="Write your message"
+                    ></textarea>
+                </div>
+
+                <button class="omar-btn" type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section class="omar-container omar-section">
+            <h2>Modal Window</h2>
+            <p>Open the modal window using CSS only.</p>
+
+            <input
+                type="checkbox"
+                id="omar-modal-toggle"
+                class="omar-modal-toggle"
+            >
+
+            <label for="omar-modal-toggle" class="omar-btn omar-open-modal">
+                Open Modal
+            </label>
+
+            <div class="omar-overlay">
+                <div
+                    class="omar-modal"
+                    role="dialog"
+                    aria-labelledby="omar-modal-title"
+                    aria-describedby="omar-modal-description"
+                >
+                    <h2 id="omar-modal-title">Welcome!</h2>
+
+                    <p id="omar-modal-description">
+                        This modal window uses HTML and CSS only.
+                    </p>
+
+                    <label for="omar-modal-toggle" class="omar-btn">
+                        Close Modal
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <section class="omar-container omar-section">
+            <h2>Alert Notifications</h2>
+
+            <div class="omar-alert omar-success" role="status">
+                <strong>Success!</strong> Your task is completed.
+            </div>
+
+            <div class="omar-alert omar-warning" role="status">
+                <strong>Warning!</strong> Please check your information.
+            </div>
+
+            <div class="omar-alert omar-error" role="alert">
+                <strong>Error!</strong> Something went wrong.
+            </div>
+        </section>
+    </main>
+
+    <footer class="omar-footer">
+        <p>&copy; 2026 Omar UI. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

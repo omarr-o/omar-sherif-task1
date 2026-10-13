@@ -1,0 +1,353 @@
+body {
+    background-color: #f4f6f9;
+    color: #333333;
+    font-family: Arial, sans-serif;
+}
+
+.omar-header,
+.omar-footer {
+    background-color: #ffffff;
+    border-bottom: 1px solid #dddddd;
+}
+
+.omar-navbar h2 {
+    color: #2563eb;
+}
+
+.omar-hero h1 {
+    color: #2563eb;
+}
+
+.omar-card,
+.omar-form {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.omar-card {
+    transition: transform 0.2s;
+}
+
+.omar-card:hover {
+    transform: translateY(-3px);
+}
+
+.omar-btn {
+    background-color: #2563eb;
+    color: white;
+    border-radius: 6px;
+}
+
+.omar-btn:hover {
+    background-color: #1d4ed8;
+}
+
+.omar-form-group input,
+.omar-form-group select,
+.omar-form-group textarea {
+    background-color: #ffffff;
+    color: #333333;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+}
+
+.omar-section > h2 {
+    color: #222222;
+}
+
+.omar-modal {
+    background-color: #ffffff;
+    color: #333333;
+    border-radius: 10px;
+}
+
+.omar-footer {
+    border-top: 1px solid #dddddd;
+    color: #666666;
+}
+
+@media (max-width: 600px) {
+    .omar-navbar {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    .omar-hero {
+        padding: 50px 0;
+    }
+
+    .omar-form {
+        padding: 18px;
+    }
+}
+.omar-container {
+    width: 90%;
+    max-width: 1100px;
+    margin-inline: auto;
+}
+
+.omar-header {
+    background: var(--surface, #ffffff);
+    border-bottom: 1px solid var(--border, #dbe2ea);
+}
+
+.omar-navbar {
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.omar-navbar h2 {
+    color: var(--primary, #4f46e5);
+}
+
+.omar-navbar nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.omar-navbar nav a {
+    color: var(--text, #172033);
+    text-decoration: none;
+}
+
+.omar-hero {
+    padding-block: 80px;
+    text-align: center;
+}
+
+.omar-hero h1 {
+    font-size: clamp(30px, 5vw, 48px);
+    margin-bottom: 15px;
+}
+
+.omar-hero p {
+    margin-bottom: 25px;
+    color: var(--muted, #64748b);
+}
+
+.omar-section {
+    padding-block: 35px;
+}
+
+.omar-section > h2 {
+    margin-bottom: 22px;
+}
+
+.omar-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.omar-card {
+    padding: 25px;
+    background: var(--surface, #ffffff);
+    color: var(--text, #172033);
+    border: 1px solid var(--border, #dbe2ea);
+    border-radius: 12px;
+}
+
+.omar-card h3 {
+    margin-bottom: 10px;
+}
+
+.omar-card p {
+    color: var(--muted, #64748b);
+}
+
+.omar-btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    background: var(--primary, #4f46e5);
+    color: #ffffff;
+    text-decoration: none;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.omar-btn:hover {
+    opacity: 0.85;
+}
+
+.omar-form {
+    max-width: 650px;
+    padding: 25px;
+    background: var(--surface, #ffffff);
+    color: var(--text, #172033);
+    border: 1px solid var(--border, #dbe2ea);
+    border-radius: 12px;
+}
+
+.omar-form-group {
+    margin-bottom: 18px;
+}
+
+.omar-form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.omar-form-group input,
+.omar-form-group select,
+.omar-form-group textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border, #dbe2ea);
+    border-radius: 7px;
+    background: var(--surface, #ffffff);
+    color: var(--text, #172033);
+    font: inherit;
+}
+
+.omar-form-group textarea {
+    resize: vertical;
+}
+
+/* CSS-only Modal */
+
+.omar-modal-toggle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.omar-modal-toggle:focus-visible + .omar-open-modal {
+    outline: 3px solid var(--primary, #4f46e5);
+    outline-offset: 4px;
+}
+
+.omar-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgb(0 0 0 / 70%);
+}
+
+.omar-modal-toggle:checked ~ .omar-overlay {
+    display: flex;
+}
+
+.omar-modal {
+    width: 100%;
+    max-width: 420px;
+    padding: 30px;
+    border-radius: 12px;
+    background: var(--surface, #ffffff);
+    color: var(--text, #172033);
+}
+
+.omar-modal p {
+    margin: 15px 0 22px;
+}
+
+/* Alerts */
+
+.omar-alert {
+    padding: 16px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.omar-success {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.omar-warning {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.omar-error {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* Footer */
+
+.omar-footer {
+    margin-top: 40px;
+    padding: 25px;
+    text-align: center;
+    background: var(--surface, #ffffff);
+    color: var(--text, #172033);
+    border-top: 1px solid var(--border, #dbe2ea);
+}
+
+/* Tablet: 2 columns */
+
+@media (min-width: 768px) {
+    .omar-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Desktop: 3 columns */
+
+@media (min-width: 1024px) {
+    .omar-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* Dark Mode */
+
+@media (prefers-color-scheme: dark) {
+    .omar-form-group input,
+    .omar-form-group select,
+    .omar-form-group textarea {
+        color-scheme: dark;
+    }
+
+    .omar-success {
+        background: #143b2a;
+        color: #bbf7d0;
+    }
+
+    .omar-warning {
+        background: #422f0b;
+        color: #fde68a;
+    }
+
+    .omar-error {
+        background: #451a1a;
+        color: #fecaca;
+    }
+
+    .omar-btn {
+        color: #111827;
+    }
+}
+/* Accessibility */
+.omar-navbar a:focus-visible,
+.omar-btn:focus-visible,
+.omar-form input:focus-visible,
+.omar-form select:focus-visible,
+.omar-form textarea:focus-visible {
+    outline: 3px solid var(--primary, #4f46e5);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .omar-container {
+        scroll-behavior: auto;
+    }
+}
